@@ -1,0 +1,13 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "Tomb Raider Chronicles",
+  "system": "PS1",
+  "type": "recomp",
+  "toolchain": "psxrecomp",
+  "status": "exploring",
+  "project": "tomb-raider-chronicles-recomp",
+  "original": {
+    "region": "USA",
+    "serial": "SLUS-01311"
+  }
+}

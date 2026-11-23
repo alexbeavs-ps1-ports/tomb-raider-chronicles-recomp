@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Tomb Raider Chronicles",
+    "id": "SLUS-01311",
+    "boot_exe": "SLUS_013.11"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "USA",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Tomb Raider Chronicles (USA).cue",
+    "bin_name": "Tomb Raider Chronicles (USA).bin",
+    "track_counts": [
+      1
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 652162560,
+      "md5": "5d692acb25ca5d47d6e886a2931dfdfe",
+      "sha1": "6d8629f9e6c7bdb5fd0228a5067abb2acf2caf9d",
+      "crc32": "c18b2cf0"
+    },
+    "disc_fp": "264e5d948a6bcc3fef39908095ad1d82aeb8f68c300469265e774087abdf6b31"
+  },
+  "exe": {
+    "load_address": "0x00010000",
+    "entry_pc": "0x0007663C",
+    "text_size": "0x00094000",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 1059,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [
+    "cue has only 1 TRACK — Track-01-only dumps fail multi-track netplay/catalog gates; prefer a full Redump cue."
+  ],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

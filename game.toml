@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Tomb Raider Chronicles"
+id = "SLUS-01311"
+players = 1
+exe = "disc/SLUS_013.11"
+disc = "disc/Tomb Raider Chronicles (USA).cue"
+discs = ["disc/Tomb Raider Chronicles (USA).cue"]
+disc_serials = ["SLUS-01311"]
+load_address = "0x00010000"
+entry_pc = "0x0007663C"
+text_size = "0x00094000"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Tomb Raider Chronicles (USA).bin"
+cue_name = "Tomb Raider Chronicles (USA).cue"
+boot_exe = "SLUS_013.11"
+known_sizes = [652162560]
+known_md5 = [
+  "5d692acb25ca5d47d6e886a2931dfdfe",
+]
+known_sha1 = [
+  "6d8629f9e6c7bdb5fd0228a5067abb2acf2caf9d",
+]
+known_crc32 = [
+  "c18b2cf0",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH1001.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Tomb Raider Chronicles Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "264e5d948a6bcc3fef39908095ad1d82aeb8f68c300469265e774087abdf6b31"
